@@ -6,17 +6,25 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { accordianList } from "@/types/type";
+import Link from "next/link";
 
-export default function AccordionTab() {
+export default function AccordionTab({
+  accordianList,
+}: {
+  accordianList: accordianList[];
+}) {
   return (
     <>
       <Accordion type="multiple" className="w-full">
-        <AccordionItem value="item-1">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
-          </AccordionContent>
-        </AccordionItem>
+        {accordianList.map((item) => (
+          <AccordionItem value={item.value}>
+            <AccordionTrigger>{item.title}</AccordionTrigger>
+            <AccordionContent>
+              <Link href="/">{item.content}</Link>
+            </AccordionContent>
+          </AccordionItem>
+        ))}
       </Accordion>
     </>
   );
