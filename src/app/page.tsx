@@ -66,7 +66,7 @@ export default function Home() {
               {/* Submenu */}
               <div className="absolute left-full top-0 z-10 w-48 bg-gray-800 rounded-md opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all">
                 <ul className="py-1 space-y-1">
-                  <li className="relative group">
+                  <li className="relative group2">
                     <a
                       href="#"
                       className="flex items-center text-white opacity-75 hover:opacity-100 py-2 px-3 rounded-md relative ">
@@ -87,12 +87,12 @@ export default function Home() {
                         </svg>
                       </span>
                       {/* Nested Submenu */}
-                      <div className="absolute left-full top-0 z-10 w-48 bg-gray-800 rounded-md opacity-75 invisible  group-hover:visible group-hover:opacity-100 transition-all">
+                      <div className="absolute left-full top-0 z-10 w-48 bg-gray-800 rounded-md invisible  group2-hover:visible transition-all">
                         <ul className="py-1 space-y-1">
                           <li>
                             <a
                               href="#"
-                              className="flex items-center text-white opacity-75 hover:opacity-100 py-2 px-3 rounded-md">
+                              className="flex items-center text-white opacity-100 py-2 px-3 rounded-md">
                               <span className="text-sm font-medium">
                                 List 1
                               </span>

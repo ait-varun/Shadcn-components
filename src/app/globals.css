@@ -74,3 +74,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.group2:hover .group2-hover\:visible {
+  visibility: visible;
+}
