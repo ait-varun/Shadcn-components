@@ -18,7 +18,7 @@ export default function AccordionTab({
     <>
       <Accordion type="multiple" className="w-full">
         {accordianList.map((item) => (
-          <AccordionItem value={item.value}>
+          <AccordionItem key={item.value} value={item.id}>
             <AccordionTrigger>{item.title}</AccordionTrigger>
             <AccordionContent>
               <Link href="/">{item.content}</Link>

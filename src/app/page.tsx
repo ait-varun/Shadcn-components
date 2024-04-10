@@ -2,7 +2,9 @@ import AccordionTab from "@/components/AccordionTab";
 import Image from "next/image";
 import { accordianList } from "@/types/type";
 import SlideUpDrawer from "@/components/SlideUp-drawer";
-
+import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
+import Products from "@/components/Products";
 export const accordianListItems: accordianList[] = [
   {
     id: "1",
@@ -28,7 +30,12 @@ export const accordianListItems: accordianList[] = [
 export default function Home() {
   return (
     <>
-      <AccordionTab accordianList={accordianListItems} />
+      {/* <Button className="bg-green-700 text-white hover:bg-green-800 rounded-full size-max">
+        Add New Member
+        <Plus className="h-4 w-4 ml-3" />
+      </Button> */}
+      <Products />
+      {/* <AccordionTab accordianList={accordianListItems} /> */}
     </>
   );
 }
