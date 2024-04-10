@@ -57,17 +57,17 @@ export default function AnotherForm() {
 
   return (
     <>
-      <div className="w-full max-w-sm rounded-2xl">
+      <div className="max-w-sm rounded-2xl">
         <div className="mb-4">
           <h2 className="text-center text-3xl font-bold m-3">Welcome Back!</h2>
-          <p className="text-center m-2">
+          <p className="text-center m-2 text-sm">
             Access Your Digital Project Management Tool
           </p>
         </div>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-8 w-80 mx-auto">
+            className="space-y-8 w-96 mx-auto ">
             <FormField
               control={form.control}
               name="email"
@@ -102,11 +102,11 @@ export default function AnotherForm() {
                 </FormItem>
               )}
             />
-            <span className="text-green-700 text-right block my-2">
+            <span className="text-green-500 text-right block my-2 cursor-pointer">
               Forgot Password?
             </span>
             <Button
-              className="w-80 bg-green-700 rounded-full hover:bg-green-800 "
+              className="w-96 bg-green-600 rounded-full hover:bg-green-700 "
               variant={"default"}
               type="submit">
               Login
@@ -118,14 +118,13 @@ export default function AnotherForm() {
             </div>
             <Button
               className="w-full bg-transparent text-gray-500  border-2 hover:bg-gray-100 hover:text-gray-900 rounded-full "
-              variant={"default"}
               type="submit">
               Google
             </Button>
             <div className="text-center">
               <p>
                 Don't have an account?
-                <span className="text-green-800 cursor-pointer"> Sign Up</span>
+                <span className="text-green-500 cursor-pointer"> Sign Up</span>
               </p>
             </div>
           </form>
