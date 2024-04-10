@@ -34,7 +34,7 @@ export default function Products() {
   return (
     <>
       {" "}
-      <Card>
+      <Card className="w-full md:auto">
         <CardHeader>
           <CardTitle>Products</CardTitle>
           <CardDescription>
@@ -55,7 +55,7 @@ export default function Products() {
             </TableHeader>
             <TableBody>
               <TableRow>
-                <TableCell className="sm:table-cell hidden">
+                <TableCell>
                   <div className="flex items-center space-x-2">
                     <Avatar>
                       <AvatarImage src="https://github.com/shadcn.png" />
