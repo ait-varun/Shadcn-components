@@ -7,6 +7,7 @@ import { Plus } from "lucide-react";
 import Products from "@/components/Products";
 import { Card } from "@/components/ui/card";
 import LoginForm from "@/components/Login-form";
+import AnotherForm from "@/components/Another-form";
 
 export const accordianListItems: accordianList[] = [
   {
@@ -38,9 +39,7 @@ export default function Home() {
         <Plus className="h-4 w-4 ml-3" />
       </Button> */}
       {/* <Products /> */}
-      <div className="">
-        <LoginForm />
-      </div>
+      <AnotherForm />
       {/* <AccordionTab accordianList={accordianListItems} /> */}
     </>
   );
