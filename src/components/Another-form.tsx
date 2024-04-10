@@ -36,6 +36,8 @@ export default function AnotherForm() {
   });
 
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
   type FormData = z.infer<typeof userAuthSchema>;
 
   function onSubmit(data: FormData) {
@@ -46,12 +48,21 @@ export default function AnotherForm() {
       data.email.toLowerCase() === "demo@gmail.com" &&
       data.password === "123456"
     ) {
-      data.email = "";
-      data.password = "";
-      // Perform login logic here
-      console.log("Login successful!");
+      // Simulate a 5-second loading state
+      setTimeout(() => {
+        setIsLoading(false);
+        form.reset();
+        // Perform login logic here
+        console.log("Login successful!");
+      }, 5000);
     } else {
-      console.log("Invalid email or password");
+      // Simulate a 5-second loading state
+      setTimeout(() => {
+        setIsLoading(false);
+        setErrorMessage("Invalid email or password");
+        // Perform login logic here
+        console.log("Invalid email or password");
+      }, 3000);
     }
   }
 
@@ -102,13 +113,18 @@ export default function AnotherForm() {
                 </FormItem>
               )}
             />
-            <span className="text-green-500 text-right block my-2 cursor-pointer">
+            {errorMessage && (
+              <p className="text-red-500 text-center mb-4">{errorMessage}</p>
+            )}{" "}
+            {/* Display error message */}
+            <span className="text-green-500 text-right block cursor-pointer !my-3">
               Forgot Password?
             </span>
             <Button
-              className="w-96 bg-green-600 rounded-full hover:bg-green-700 "
+              className="w-96 bg-green-600 rounded-full hover:bg-green-700 !mt-4"
               variant={"default"}
-              type="submit">
+              type="submit"
+              disabled={isLoading}>
               Login
             </Button>
             <div className="w-full flex items-center justify-between">
