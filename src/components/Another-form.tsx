@@ -48,12 +48,11 @@ export default function AnotherForm() {
       data.email.toLowerCase() === "demo@gmail.com" &&
       data.password === "123456"
     ) {
+      setErrorMessage("");
       // Simulate a 5-second loading state
       setTimeout(() => {
         setIsLoading(false);
         form.reset();
-        // Perform login logic here
-        console.log("Login successful!");
       }, 5000);
     } else {
       // Simulate a 5-second loading state
@@ -114,7 +113,7 @@ export default function AnotherForm() {
               )}
             />
             {errorMessage && (
-              <p className="text-red-500 text-center mb-4">{errorMessage}</p>
+              <p className="text-red-500  !mt-2">{errorMessage}</p>
             )}{" "}
             {/* Display error message */}
             <span className="text-green-500 text-right block cursor-pointer !my-3">
