@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { LucideEdit3, Circle } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -74,7 +73,7 @@ export default function Products() {
                 <TableCell>
                   <div className="flex items-center space-x-2">
                     <Circle
-                      className="h-2 w-2 text-green-500"
+                      className="h-3 w-3 text-green-500"
                       fill="currentColor"
                     />
                     <span>Active</span>

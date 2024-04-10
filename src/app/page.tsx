@@ -5,6 +5,9 @@ import SlideUpDrawer from "@/components/SlideUp-drawer";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import Products from "@/components/Products";
+import { Card } from "@/components/ui/card";
+import LoginForm from "@/components/Login-form";
+
 export const accordianListItems: accordianList[] = [
   {
     id: "1",
@@ -34,7 +37,10 @@ export default function Home() {
         Add New Member
         <Plus className="h-4 w-4 ml-3" />
       </Button> */}
-      <Products />
+      {/* <Products /> */}
+      <div className="">
+        <LoginForm />
+      </div>
       {/* <AccordionTab accordianList={accordianListItems} /> */}
     </>
   );
