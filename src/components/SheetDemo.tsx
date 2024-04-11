@@ -26,13 +26,20 @@ import {
 
 import { Textarea } from "@/components/ui/textarea";
 import DateSelect from "./ui/DateSelect";
-
-const handleDateSelect = (selectedDate: Date | undefined) => {
-  // Handle the selected date here
-  console.log("Selected date:", selectedDate);
-};
+import { useState } from "react";
 
 export function SheetDemo() {
+  const [date, setDate] = useState<Date>();
+
+  const handleDateSelect = (selectedDate: Date | undefined) => {
+    // Handle the selected date here
+    setDate(selectedDate);
+  };
+
+  const handleSubmitTask = () => {
+    console.log("Submit task", "Selected date:", date);
+  };
+
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -41,9 +48,6 @@ export function SheetDemo() {
       <SheetContent>
         <SheetHeader>
           <SheetTitle>Add New Task</SheetTitle>
-          {/* <SheetDescription>
-            Make changes to your profile here. Click save when you're done.
-          </SheetDescription> */}
         </SheetHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-rows-2 items-center">
@@ -100,7 +104,7 @@ export function SheetDemo() {
         </div>
         <SheetFooter>
           <SheetClose asChild>
-            <Button type="submit" onClick={() => console.log("Submit")}>
+            <Button type="submit" onClick={() => handleSubmitTask()}>
               Submit
             </Button>
           </SheetClose>
