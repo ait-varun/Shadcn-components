@@ -30,6 +30,7 @@ import { useState } from "react";
 
 export function SheetDemo() {
   const [date, setDate] = useState<Date>();
+  const [taskName, setTaskName] = useState<string>("");
 
   const handleDateSelect = (selectedDate: Date | undefined) => {
     // Handle the selected date here
@@ -37,7 +38,7 @@ export function SheetDemo() {
   };
 
   const handleSubmitTask = () => {
-    console.log("Submit task", "Selected date:", date);
+    console.log("Submit task", "Selected date:", date, taskName);
   };
 
   return (
@@ -54,8 +55,10 @@ export function SheetDemo() {
             <Label htmlFor="name">Task Name</Label>
             <Input
               id="name"
-              defaultValue="Enter Task Name"
+              // defaultValue="Enter Task Name"
+              placeholder="Enter Task name"
               className="col-span-3"
+              onChange={(e) => setTaskName(e.target.value)}
             />
           </div>
           <div className="grid grid-rows-2 items-center">
