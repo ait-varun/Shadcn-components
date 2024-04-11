@@ -8,7 +8,7 @@ export default function Contact() {
       <Header />
       <div className="">
         <SidebarMenu />
-        <main className="flex-1">
+        <main className="md:ml-60">
           <Products />
         </main>
       </div>
