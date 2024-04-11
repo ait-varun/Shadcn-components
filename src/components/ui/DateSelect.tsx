@@ -15,8 +15,18 @@ import { format } from "date-fns";
 
 import { useState } from "react";
 
-export default function DateSelect() {
+interface DateSelectProps {
+  onDateSelect: (date: Date | undefined) => void;
+}
+
+export default function DateSelect({ onDateSelect }: DateSelectProps) {
   const [date, setDate] = useState<Date>();
+
+  const handleDateSelect = (selectedDate: Date | undefined) => {
+    setDate(selectedDate);
+    onDateSelect(selectedDate);
+  };
+
   return (
     <>
       <Label htmlFor="name">Due Date</Label>
@@ -38,7 +48,7 @@ export default function DateSelect() {
           <Calendar
             mode="single"
             selected={date}
-            onSelect={setDate}
+            onSelect={handleDateSelect}
             initialFocus
           />
         </PopoverContent>

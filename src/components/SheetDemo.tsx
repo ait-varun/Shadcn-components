@@ -3,17 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { format } from "date-fns";
-import { Calendar as CalendarIcon } from "lucide-react";
-import { useState } from "react";
-
-import { cn } from "@/lib/utils";
-import { Calendar } from "@/components/ui/calendar";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 
 import {
   Sheet,
@@ -38,8 +27,12 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import DateSelect from "./ui/DateSelect";
 
+const handleDateSelect = (selectedDate: Date | undefined) => {
+  // Handle the selected date here
+  console.log("Selected date:", selectedDate);
+};
+
 export function SheetDemo() {
-  const [date, setDate] = useState<Date>();
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -79,7 +72,7 @@ export function SheetDemo() {
             </Select>
           </div>
           <div className="grid grid-rows-2 items-center">
-            <DateSelect />
+            <DateSelect onDateSelect={handleDateSelect} />
           </div>
           <div className="grid grid-rows-2 items-center">
             <Label htmlFor="username">Priority</Label>
@@ -107,7 +100,9 @@ export function SheetDemo() {
         </div>
         <SheetFooter>
           <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
+            <Button type="submit" onClick={() => console.log("Submit")}>
+              Submit
+            </Button>
           </SheetClose>
         </SheetFooter>
       </SheetContent>
