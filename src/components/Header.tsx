@@ -1,6 +1,6 @@
 "use client";
 import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
+import { Search, BellIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useState } from "react";
 
@@ -95,10 +95,13 @@ export default function Header() {
         </div>
 
         {/* Avatar */}
-        <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
+        <div className="flex items-center">
+          <BellIcon className="h-5 w-5 mr-8" />
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+        </div>
       </div>
     </>
   );
