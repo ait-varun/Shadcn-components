@@ -3,6 +3,17 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { format } from "date-fns";
+import { Calendar as CalendarIcon } from "lucide-react";
+import { useState } from "react";
+
+import { cn } from "@/lib/utils";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 import {
   Sheet,
@@ -25,6 +36,7 @@ import {
 } from "@/components/ui/select";
 
 export function SheetDemo() {
+  const [date, setDate] = useState<Date>();
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -62,6 +74,32 @@ export function SheetDemo() {
                 </SelectGroup>
               </SelectContent>
             </Select>
+          </div>
+          <div className="grid grid-rows-2 items-center">
+            <Label htmlFor="name">Due Date</Label>
+            <Popover>
+              <PopoverTrigger
+                asChild
+                className="flex justify-between flex-row-reverse">
+                <Button
+                  variant={"outline"}
+                  className={cn(
+                    "text-left font-normal",
+                    !date && "text-muted-foreground"
+                  )}>
+                  <CalendarIcon className="ml-2 h-4 w-4" />
+                  {date ? format(date, "PPP") : <span>Select due date</span>}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-full p-0" align="start">
+                <Calendar
+                  mode="single"
+                  selected={date}
+                  onSelect={setDate}
+                  initialFocus
+                />
+              </PopoverContent>
+            </Popover>
           </div>
         </div>
         <SheetFooter>
