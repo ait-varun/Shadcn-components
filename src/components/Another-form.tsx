@@ -54,9 +54,9 @@ export default function AnotherForm() {
       // Simulate a 5-second loading state
       setTimeout(() => {
         setIsLoading(false);
-        router.push("/Contact");
+        router.push("/Dashboard");
         form.reset();
-      }, 5000);
+      }, 3000);
     } else {
       // Simulate a 5-second loading state
       setTimeout(() => {
