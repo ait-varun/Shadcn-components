@@ -35,6 +35,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import { Textarea } from "@/components/ui/textarea";
+
 export function SheetDemo() {
   const [date, setDate] = useState<Date>();
   return (
@@ -100,6 +102,29 @@ export function SheetDemo() {
                 />
               </PopoverContent>
             </Popover>
+          </div>
+          <div className="grid grid-rows-2 items-center">
+            <Label htmlFor="username">Priority</Label>
+            <Select>
+              <SelectTrigger>
+                <SelectValue placeholder="Select the priority level of the task" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectItem value="1">High</SelectItem>
+                  <SelectItem value="2">Medium</SelectItem>
+                  <SelectItem value="3">Low</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="">
+            <Label htmlFor="message">Your message</Label>
+            <Textarea
+              placeholder="Type your message here."
+              id="message"
+              className="mt-4"
+            />
           </div>
         </div>
         <SheetFooter>
