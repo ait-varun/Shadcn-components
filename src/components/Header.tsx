@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="flex items-center justify-between px-4 py-2 bg-cyan-600 text-white">
+      <div className="flex items-center justify-between px-4 py-2 bg-blue-400 text-white">
         {/* Logo */}
         <div className="text-xl font-bold">Logo</div>
 
@@ -37,7 +37,7 @@ export default function Header() {
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearchChange}
-            className="px-10 py-2 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-10 py-2 rounded-full bg-white text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
