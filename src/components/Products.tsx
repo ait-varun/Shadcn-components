@@ -33,7 +33,7 @@ export default function Products() {
   return (
     <>
       {" "}
-      <Card className="w-full md:auto">
+      <Card className="flex flex-col md:ml-60">
         <CardHeader>
           <CardTitle>Products</CardTitle>
           <CardDescription>
@@ -41,7 +41,7 @@ export default function Products() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Table>
+          <Table className="w-full md:auto">
             <TableHeader>
               <TableRow>
                 <TableHead>Name</TableHead>

@@ -55,7 +55,7 @@ export default function Header() {
 
   return (
     <>
-      <div className=" px-4 w-full flex py-2 bg-blue-400 text-white ">
+      <div className="sticky top-0 z-10 px-4 w-full flex py-2 bg-blue-400 text-white ">
         {/* Logo */}
         <div className="text-xl font-bold w-64">Logo</div>
 

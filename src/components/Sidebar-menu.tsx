@@ -4,7 +4,7 @@ export default function SidebarMenu() {
   return (
     <>
       {/* Sidebar */}
-      <div className="w-64 bg-gray-800 h-dvh">
+      <div className="md:w-60  h-screen flex-1 fixed  hidden md:flex bg-gray-800 ">
         <div className="py-4 px-3">
           {/* Main Menu Items */}
           <ul className="space-y-2">

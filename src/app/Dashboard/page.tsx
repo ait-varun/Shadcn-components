@@ -6,9 +6,11 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <div className="flex">
+      <div className="">
         <SidebarMenu />
-        <Products />
+        <main className="flex-1">
+          <Products />
+        </main>
       </div>
     </>
   );
