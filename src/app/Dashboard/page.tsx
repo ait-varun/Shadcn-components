@@ -5,7 +5,7 @@ import SidebarMenu from "@/components/Sidebar-menu";
 export default function Contact() {
   return (
     <>
-      <main className="md:ml-40">
+      <main className="md:ml-40 z-10">
         <Products />
       </main>
     </>
