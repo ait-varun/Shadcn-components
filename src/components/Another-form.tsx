@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
@@ -25,7 +26,9 @@ export const userAuthSchema = z.object({
   email: z.string().email(),
   password: z.string().min(6),
 });
+
 export default function AnotherForm() {
+  const router = useRouter();
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -51,6 +54,7 @@ export default function AnotherForm() {
       // Simulate a 5-second loading state
       setTimeout(() => {
         setIsLoading(false);
+        router.push("/Contact");
         form.reset();
       }, 5000);
     } else {

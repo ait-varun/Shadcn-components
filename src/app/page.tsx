@@ -38,8 +38,8 @@ export default function Home() {
         Add New Member
         <Plus className="h-4 w-4 ml-3" />
       </Button> */}
-      {/* <Products /> */}
-      <AnotherForm />
+      <Products />
+
       {/* <AccordionTab accordianList={accordianListItems} /> */}
     </>
   );
