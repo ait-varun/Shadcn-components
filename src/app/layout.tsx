@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import SidebarMenu from "@/components/Sidebar-menu";
 import Header from "@/components/Header";
+import Header2 from "@/components/Header2";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -26,9 +27,9 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased  ",
           fontSans.variable
         )}>
-        <Header />
+        {/* <Header /> */}
+        <Header2 />
         <SidebarMenu />
-        {/* <SidebarMenu /> */}
         {children}
       </body>
     </html>
