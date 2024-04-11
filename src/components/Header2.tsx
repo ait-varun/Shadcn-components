@@ -11,6 +11,7 @@ interface Country {
 
 export default function Header2() {
   const [searchInput, setSearchInput] = useState("");
+  const [noResult, setNoResult] = useState(false);
   const [filteredCountries, setFilteredCountries] = useState<Country[]>([]);
   const dropdownRef = useRef<HTMLFormElement>(null);
 
@@ -47,6 +48,7 @@ export default function Header2() {
         !dropdownRef.current.contains(event.target as Node)
       ) {
         setFilteredCountries([]);
+        setNoResult(false);
       }
     };
 
@@ -65,11 +67,13 @@ export default function Header2() {
       country.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredCountries(filtered);
+    setNoResult(filtered.length === 0 && searchTerm !== "");
   };
 
   const handleCountryClick = (countryName: string) => {
     setSearchInput(countryName);
     setFilteredCountries([]); // Clear the filtered countries list
+    setNoResult(false);
   };
 
   return (
@@ -89,7 +93,7 @@ export default function Header2() {
                 value={searchInput}
                 onChange={handleChange}
               />
-              {filteredCountries.length > 0 && (
+              {filteredCountries.length > 0 ? (
                 <ul className="absolute z-10 w-full bg-white text-black shadow-lg rounded-md mt-2">
                   {filteredCountries.map((country, index) => (
                     <li
@@ -100,6 +104,12 @@ export default function Header2() {
                     </li>
                   ))}
                 </ul>
+              ) : (
+                noResult && (
+                  <div className="absolute z-10 w-full bg-white text-black shadow-lg rounded-md mt-2 p-4">
+                    No result
+                  </div>
+                )
               )}
             </form>
           </div>
