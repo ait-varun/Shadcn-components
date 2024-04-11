@@ -86,8 +86,7 @@ export default function Header() {
               {filteredCountries.map((country, index) => (
                 <li
                   key={index}
-                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                  onClick={() => handleCountryClick(country.name)}>
+                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                   {country.name}
                 </li>
               ))}
@@ -96,13 +95,10 @@ export default function Header() {
         </div>
 
         {/* Avatar */}
-        <div className="relative">
-          <img
-            src="https://github.com/shadcn.png"
-            alt="Avatar"
-            className="w-10 h-10 rounded-full"
-          />
-        </div>
+        <Avatar>
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
       </div>
     </>
   );
