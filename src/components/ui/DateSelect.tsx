@@ -22,9 +22,16 @@ interface DateSelectProps {
 export default function DateSelect({ onDateSelect }: DateSelectProps) {
   const [date, setDate] = useState<Date>();
 
+
   const handleDateSelect = (selectedDate: Date | undefined) => {
     setDate(selectedDate);
     onDateSelect(selectedDate);
+  };
+
+  const today = new Date();
+
+  const pastDate = (date: Date) => {
+    return date < today;
   };
 
   return (
@@ -49,6 +56,7 @@ export default function DateSelect({ onDateSelect }: DateSelectProps) {
             mode="single"
             selected={date}
             onSelect={handleDateSelect}
+            disabled={pastDate}
             initialFocus
           />
         </PopoverContent>
