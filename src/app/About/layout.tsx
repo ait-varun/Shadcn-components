@@ -9,5 +9,7 @@ export default function AboutLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="ps-4">{children}</div>;
+  return (
+    <div className="flex items-center justify-center h-screen">{children}</div>
+  );
 }
