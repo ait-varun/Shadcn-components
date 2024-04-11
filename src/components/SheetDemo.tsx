@@ -36,6 +36,7 @@ import {
 } from "@/components/ui/select";
 
 import { Textarea } from "@/components/ui/textarea";
+import DateSelect from "./ui/DateSelect";
 
 export function SheetDemo() {
   const [date, setDate] = useState<Date>();
@@ -78,30 +79,7 @@ export function SheetDemo() {
             </Select>
           </div>
           <div className="grid grid-rows-2 items-center">
-            <Label htmlFor="name">Due Date</Label>
-            <Popover>
-              <PopoverTrigger
-                asChild
-                className="flex justify-between flex-row-reverse">
-                <Button
-                  variant={"outline"}
-                  className={cn(
-                    "text-left font-normal",
-                    !date && "text-muted-foreground"
-                  )}>
-                  <CalendarIcon className="ml-2 h-4 w-4" />
-                  {date ? format(date, "PPP") : <span>Select due date</span>}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-full p-0" align="start">
-                <Calendar
-                  mode="single"
-                  selected={date}
-                  onSelect={setDate}
-                  initialFocus
-                />
-              </PopoverContent>
-            </Popover>
+            <DateSelect />
           </div>
           <div className="grid grid-rows-2 items-center">
             <Label htmlFor="username">Priority</Label>
