@@ -81,7 +81,7 @@ export default function Header2() {
         <div className="flex grow justify-between">
           <div className="relative">
             <form ref={dropdownRef}>
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+              <Search className="absolute left-2.5 top-3 h-4 w-4 text-muted-foreground" />
               <Input
                 type="search"
                 placeholder="Search ..."
