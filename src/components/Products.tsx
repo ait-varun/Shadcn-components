@@ -41,7 +41,7 @@ export default function Products() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Table className="w-full md:auto">
+          <Table>
             <TableHeader>
               <TableRow>
                 <TableHead>Name</TableHead>

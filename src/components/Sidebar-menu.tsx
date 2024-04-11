@@ -4,7 +4,7 @@ export default function SidebarMenu() {
   return (
     <>
       {/* Sidebar */}
-      <div className="md:w-60  h-screen flex-1 fixed  hidden md:flex bg-gray-800 ">
+      <div className="md:w-40  h-screen  fixed  hidden md:flex bg-gray-800 ">
         <div className="py-4 px-3">
           {/* Main Menu Items */}
           <ul className="space-y-2">
@@ -39,7 +39,7 @@ export default function SidebarMenu() {
                 </span>
               </a>
               {/* Submenu */}
-              <div className="absolute left-full top-0 z-10 w-48 bg-gray-800 rounded-md opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all">
+              <div className="absolute left-full top-0 z-30 w-48 bg-gray-800  opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all">
                 <ul className="py-1 space-y-1">
                   <li className="relative group2">
                     <a
@@ -63,7 +63,7 @@ export default function SidebarMenu() {
                       </span>
                     </a>
                     {/* Nested Submenu */}
-                    <div className="absolute left-full top-0 z-10 w-48 bg-gray-800 rounded-md invisible  group2-hover:visible transition-all">
+                    <div className="absolute left-full top-0 z-30 w-48 bg-gray-800  invisible  group2-hover:visible transition-all">
                       <ul className="py-1 space-y-1">
                         <li>
                           <a
