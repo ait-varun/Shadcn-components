@@ -20,11 +20,9 @@ const formSchema = z.object({
 });
 
 export default function ProfileForm({
-  loggedIn,
   onClose,
   onLogin,
 }: {
-  loggedIn: boolean;
   onClose: () => void;
   onLogin: () => void;
 }) {
@@ -34,12 +32,6 @@ export default function ProfileForm({
       email: "",
     },
   });
-
-  useEffect(() => {
-    if (loggedIn) {
-      onClose();
-    }
-  }, [loggedIn, onClose]);
 
   function handleSubmit(values: any) {
     const { email } = values;

@@ -7,13 +7,11 @@ import ProfileForm from "@/components/Profile-form";
 
 export default function Contact() {
   const [show, setShow] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
 
   useEffect(() => {
+    // Check if the user is logged in from local storage
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
     // Only show the overlay if the user is not logged in
     if (!isLoggedIn) {
       const timer = setTimeout(() => {
@@ -27,19 +25,21 @@ export default function Contact() {
     }
   }, []);
 
+  const handleLogin = () => {
+    // Set the user's login status in local storage
+    localStorage.setItem("isLoggedIn", "true");
+    setShow(false);
+  };
+
   return (
     <>
       <main className="md:ml-40">
         <Products />
         <SheetDemo />
         {/* Render the Overlay only if the user is not logged in */}
-        {!isLoggedIn && (
+        {localStorage.getItem("isLoggedIn") !== "true" && (
           <Overlay show={show} onClose={() => setShow(false)}>
-            <ProfileForm
-              loggedIn={isLoggedIn}
-              onClose={() => setShow(false)}
-              onLogin={handleLogin}
-            />
+            <ProfileForm onClose={() => setShow(false)} onLogin={handleLogin} />
           </Overlay>
         )}
       </main>
