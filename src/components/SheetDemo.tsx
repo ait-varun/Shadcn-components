@@ -109,6 +109,9 @@ export function SheetDemo() {
         </div>
         <SheetFooter>
           <SheetClose asChild>
+            <Button variant={"outline"}>Cancel</Button>
+          </SheetClose>
+          <SheetClose asChild>
             <Button type="submit" onClick={() => handleSubmitTask()}>
               Submit
             </Button>
