@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/select";
 
 import { Textarea } from "@/components/ui/textarea";
-import DateSelect from "./ui/DateSelect";
+import DateSelect from "./DateSelect";
 import { useState } from "react";
 import Link from "next/link";
 

@@ -22,7 +22,6 @@ interface DateSelectProps {
 export default function DateSelect({ onDateSelect }: DateSelectProps) {
   const [date, setDate] = useState<Date>();
 
-
   const handleDateSelect = (selectedDate: Date | undefined) => {
     setDate(selectedDate);
     onDateSelect(selectedDate);
