@@ -134,9 +134,7 @@ export default function AnotherForm() {
               <span className="mx-4 text-gray-500">or</span>
               <hr className="w-full border-gray-300" />
             </div>
-            <Button
-              className="w-full bg-transparent text-gray-500  border-2 hover:bg-gray-100 hover:text-gray-900 rounded-full "
-              type="submit">
+            <Button className="w-full bg-transparent text-gray-500  border-2 hover:bg-gray-100 hover:text-gray-900 rounded-full ">
               Google
             </Button>
             <div className="text-center">

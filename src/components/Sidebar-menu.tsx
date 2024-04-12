@@ -1,25 +1,27 @@
 "use client";
 
+import Link from "next/link";
+
 export default function SidebarMenu() {
   return (
     <>
       {/* Sidebar */}
-      <div className="md:w-40  h-screen z-50  fixed  hidden md:flex bg-gray-800 ">
+      <div className="md:w-40  h-screen z-40  fixed  hidden md:flex bg-gray-800 ">
         <div className="py-4 px-3">
           {/* Main Menu Items */}
           <ul className="space-y-2">
             <li>
-              <a
-                href="#"
-                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 px-3 rounded-md">
-                <span className="mr-3">{/* Icon here */}</span>
-                <span className="text-sm font-medium">Dashboard</span>
-              </a>
+              <span className="mr-3">{/* Icon here */}</span>
+              <Link
+                href="/Dashboard"
+                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 px-3 rounded-md text-sm font-medium">
+                Dashboard
+              </Link>
             </li>
             <li className="relative group">
               <a
                 href="#"
-                className="flex items-center text-white opacity-75 hover:opacity-100 py-2 px-3 rounded-md group">
+                className="flex items-center text-white opacity-75 hover:opacity-100 py-2  rounded-md group">
                 <span className="mr-3">{/* Icon here */}</span>
                 <span className="text-sm font-medium">Products</span>
                 <span className="ml-auto transition">
@@ -66,18 +68,18 @@ export default function SidebarMenu() {
                     <div className="absolute left-full top-0 z-30 w-48 bg-gray-800  invisible  group2-hover:visible transition-all">
                       <ul className="py-1 space-y-1">
                         <li>
-                          <a
-                            href="#"
-                            className="flex items-center text-white opacity-100 py-2 px-3 rounded-md">
-                            <span className="text-sm font-medium">List 1</span>
-                          </a>
+                          <Link
+                            href="/About"
+                            className="flex items-center text-white opacity-100 py-2 px-3 rounded-md text-sm font-medium">
+                            About
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="#"
-                            className="flex items-center text-white opacity-75 hover:opacity-100 py-2 px-3 rounded-md">
-                            <span className="text-sm font-medium">List 2</span>
-                          </a>
+                          <Link
+                            href="/"
+                            className="flex items-center text-white opacity-100 py-2 px-3 rounded-md text-sm font-medium">
+                            Home
+                          </Link>
                         </li>
                         <li>
                           <a

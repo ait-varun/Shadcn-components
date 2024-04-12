@@ -27,6 +27,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import DateSelect from "./ui/DateSelect";
 import { useState } from "react";
+import Link from "next/link";
 
 export function SheetDemo() {
   const [date, setDate] = useState<Date>();
@@ -46,6 +47,7 @@ export function SheetDemo() {
       <SheetTrigger asChild>
         <Button variant="outline">Open</Button>
       </SheetTrigger>
+      {/* <SheetContent className="sm:max-w-2xl"> */}
       <SheetContent>
         <SheetHeader>
           <SheetTitle>Add New Task</SheetTitle>
