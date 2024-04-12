@@ -3,25 +3,27 @@ import { useState, useEffect } from "react";
 import Overlay from "@/components/Overlay";
 import Products from "@/components/Products";
 import { SheetDemo } from "@/components/SheetDemo";
+import ProfileForm from "@/components/Profile-form";
 
 export default function Contact() {
   const [show, setShow] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Add a state for isLoggedIn
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
 
   useEffect(() => {
-    // Check if the user is logged in (you'll need to implement this logic)
-    // const isUserLoggedIn = checkIfUserIsLoggedIn();
-    const isUserLoggedIn = true;
-    setIsLoggedIn(isUserLoggedIn);
-
     // Only show the overlay if the user is not logged in
-    if (!isUserLoggedIn) {
+    if (!isLoggedIn) {
       const timer = setTimeout(() => {
         setShow(true);
       }, 1000);
 
       // Clean up function to clear the timeout when the component is unmounted
       return () => clearTimeout(timer);
+    } else {
+      setShow(false);
     }
   }, []);
 
@@ -31,7 +33,15 @@ export default function Contact() {
         <Products />
         <SheetDemo />
         {/* Render the Overlay only if the user is not logged in */}
-        {!isLoggedIn && <Overlay show={show} onClose={() => setShow(false)} />}
+        {!isLoggedIn && (
+          <Overlay show={show} onClose={() => setShow(false)}>
+            <ProfileForm
+              loggedIn={isLoggedIn}
+              onClose={() => setShow(false)}
+              onLogin={handleLogin}
+            />
+          </Overlay>
+        )}
       </main>
     </>
   );
