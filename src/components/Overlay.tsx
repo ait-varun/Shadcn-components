@@ -13,9 +13,7 @@ export default function Overlay({
       {show && (
         <div className="fixed z-50 inset-0 overflow-hidden">
           <div className="flex items-center justify-center min-h-screen">
-            <div
-              className="bg-white rounded-lg shadow-lg p-6 w-[80vw] h-[80vh] fixed top-[10vh] left-[10vw]"
-              onClick={(e) => e.stopPropagation()}>
+            <div className="bg-white rounded-lg shadow-lg p-6 w-[80vw] h-[80vh] fixed top-[10vh] left-[10vw]">
               <h2 className="text-2xl mb-4">Overlay Modal</h2>
               <p className="mb-6">This is an overlay modal.</p>
               <button
