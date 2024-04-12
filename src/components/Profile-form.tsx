@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useState, useEffect } from "react";
+import UploadFile from "./Upload-file";
 
 const formSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
@@ -63,6 +64,7 @@ export default function ProfileForm({
             </FormItem>
           )}
         />
+        <UploadFile />
         <Button type="submit">Submit</Button>
       </form>
     </Form>

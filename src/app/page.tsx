@@ -1,13 +1,4 @@
-import AccordionTab from "@/components/AccordionTab";
-import Image from "next/image";
 import { accordianList } from "@/types/type";
-import SlideUpDrawer from "@/components/SlideUp-drawer";
-import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
-import Products from "@/components/Products";
-import { Card } from "@/components/ui/card";
-import LoginForm from "@/components/Login-form";
-import AnotherForm from "@/components/Another-form";
 
 export const accordianListItems: accordianList[] = [
   {
@@ -33,13 +24,12 @@ export const accordianListItems: accordianList[] = [
 
 export default function Home() {
   return (
-    <>
+    <div className="md:ml-40">
       {/* <Button className="bg-green-700 text-white hover:bg-green-800 rounded-full size-max">
         Add New Member
         <Plus className="h-4 w-4 ml-3" />
       </Button> */}
-
       {/* <AccordionTab accordianList={accordianListItems} /> */}
-    </>
+    </div>
   );
 }
