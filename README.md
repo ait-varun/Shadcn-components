@@ -34,3 +34,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Added Next.js View Transitions
+
+This project uses [next-view-transitions](https://next-view-transitions.vercel.app/) to add view transitions to the app.
+
+
+## Update Next.js to Latest Version
+
+To update Next.js to the latest version, run the following command:
+
+```bash
+npm i next@latest react@latest react-dom@latest eslint-config-next@latest
+```
+
