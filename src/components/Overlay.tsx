@@ -17,11 +17,11 @@ export default function Overlay({ show, onClose, children }: OverlayProps) {
               className="bg-white rounded-lg shadow-lg p-6 w-[80vw] h-[80vh] relative"
               onClick={(e) => e.stopPropagation()}>
               {children}
-              {/* <button
-                className="bg-blue-500 text-white py-2 px-4 rounded"
+              <button
+                className="bg-blue-500 text-white py-2 px-4 rounded mt-10 flex "
                 onClick={onClose}>
                 Close Modal
-              </button> */}
+              </button>
             </div>
           </div>
         </div>

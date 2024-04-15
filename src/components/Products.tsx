@@ -95,6 +95,48 @@ export default function Products() {
                   </DropdownMenu>
                 </TableCell>
               </TableRow>
+              <TableRow>
+                <TableCell>
+                  <div className="flex items-center space-x-2">
+                    <Avatar>
+                      <AvatarImage src="https://github.com/shadcn.png" />
+                      <AvatarFallback>CN</AvatarFallback>
+                    </Avatar>
+                    <span className="font-medium">Anna muller</span>
+                  </div>
+                </TableCell>
+                <TableCell className="font-medium">Project Manager</TableCell>
+                <TableCell>
+                  anna.mueller@gmail.com <br /> +41 79 123 4567
+                </TableCell>
+                <TableCell>
+                  Overall project management, coordination, and client Liasison.
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center space-x-2">
+                    <Circle
+                      className="h-3 w-3 text-green-500"
+                      fill="currentColor"
+                    />
+                    <span>Active</span>
+                  </div>
+                </TableCell>
+                <TableCell>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button aria-haspopup="true" size="icon" variant="ghost">
+                        <LucideEdit3 className="h-4 w-4" />
+                        <span className="sr-only">Toggle menu</span>
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                      <DropdownMenuItem>Edit</DropdownMenuItem>
+                      <DropdownMenuItem>Delete</DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </TableCell>
+              </TableRow>
             </TableBody>
           </Table>
         </CardContent>

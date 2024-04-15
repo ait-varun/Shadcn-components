@@ -1,3 +1,4 @@
+import { CardsDataTable } from "@/components/data-table";
 import { accordianList } from "@/types/type";
 
 export const accordianListItems: accordianList[] = [
@@ -30,6 +31,7 @@ export default function Home() {
         <Plus className="h-4 w-4 ml-3" />
       </Button> */}
       {/* <AccordionTab accordianList={accordianListItems} /> */}
+      <CardsDataTable />
     </div>
   );
 }
