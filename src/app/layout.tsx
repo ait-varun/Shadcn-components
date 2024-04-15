@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import SidebarMenu from "@/components/Sidebar-menu";
 import Header from "@/components/Header";
 import Header2 from "@/components/Header2";
+import { ViewTransitions } from "next-view-transitions";
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -21,17 +23,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased  ",
-          fontSans.variable
-        )}>
-        {/* <Header /> */}
-        <Header2 />
-        <SidebarMenu />
-        {children}
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased  ",
+            fontSans.variable
+          )}>
+          {/* <Header /> */}
+          <Header2 />
+          <SidebarMenu />
+          {children}
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

@@ -68,7 +68,7 @@ export default function Products() {
                   anna.mueller@gmail.com <br /> +41 79 123 4567
                 </TableCell>
                 <TableCell>
-                  Overall project management, coordination, and client Liasison.
+                  Overall project management, coordination, and client Lias.
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center space-x-2">
