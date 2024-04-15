@@ -123,7 +123,7 @@ export default function AnotherForm() {
               Forgot Password?
             </span>
             <Button
-              className="w-96 bg-green-600 rounded-full hover:bg-green-700 !mt-4"
+              className="w-96  rounded-full  !mt-4"
               variant={"default"}
               type="submit"
               disabled={isLoading}>
