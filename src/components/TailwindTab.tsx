@@ -6,21 +6,21 @@ import ProductTest from "./ProductTest";
 import TabDemo from "./TabDemo";
 
 const tabs: { label: string; component: JSX.Element }[] = [
-  { label: "Tab 1", component: <Products /> },
-  { label: "Tab 2", component: <ProductTest /> },
-  { label: "Tab 3", component: <TabDemo /> },
-  { label: "Tab 4", component: <Products /> },
-  { label: "Tab 5", component: <ProductTest /> },
-  { label: "Tab 6", component: <TabDemo /> },
-  { label: "Tab 7", component: <Products /> },
-  { label: "Tab 8", component: <ProductTest /> },
-  { label: "Tab 9", component: <TabDemo /> },
-  { label: "Tab 10", component: <Products /> },
-  { label: "Tab 11", component: <ProductTest /> },
-  { label: "Tab 12", component: <TabDemo /> },
-  { label: "Tab 13", component: <Products /> },
-  { label: "Tab 14", component: <ProductTest /> },
-  { label: "Tab 15", component: <TabDemo /> },
+  { label: "Products", component: <Products /> },
+  { label: "Product Test", component: <ProductTest /> },
+  { label: "Tab Demo", component: <TabDemo /> },
+  { label: "Products 1", component: <Products /> },
+  { label: "Product Test 1", component: <ProductTest /> },
+  { label: "Tab Demo 1", component: <TabDemo /> },
+  { label: "Products 2", component: <Products /> },
+  { label: "Product Test 2", component: <ProductTest /> },
+  { label: "Tab Demo 2", component: <TabDemo /> },
+  { label: "Products 3", component: <Products /> },
+  { label: "Product Test 3", component: <ProductTest /> },
+  { label: "Tab Demo 3", component: <TabDemo /> },
+  { label: "Products 4", component: <Products /> },
+  { label: "Product Test 4", component: <ProductTest /> },
+  { label: "Tab Demo 4", component: <TabDemo /> },
 ];
 
 export default function TailwindTab() {
