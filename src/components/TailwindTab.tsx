@@ -50,7 +50,7 @@ export default function TailwindTab() {
 
   return (
     <>
-      <div className="flex">
+      <div className="flex align-centre">
         <button
           onClick={scrollLeft}
           className="bg-gray-300 p-2 disabled:opacity-50"
